@@ -1,0 +1,6 @@
+@host = http://localhost:5000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyN2NlZTRkMGM3NWYwYTMwNWViNzYyNiIsIm5hbWUiOiJMYWJoYW0gSmFpbiIsImVtYWlsIjoiY29kaW5nLmxhYmhhbUBnbWFpbC5jb20iLCJpYXQiOjE2NTIzNTQ2Mzh9.xWCu6ERkC1GxzKFiUZ-foJpdvc08DvzYDNHxznshWwI
+# Upload video
+
+POST {{host}}/admin/update
+Authorization: Bearer {{token}}

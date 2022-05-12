@@ -1,0 +1,11 @@
+@host = http://localhost:5000
+@json = application/json
+
+
+POST {{host}}/login
+Content-Type: {{json}}
+
+{
+  "phoneOrEmail": "+918920213868",
+  "password": "labham1234"
+}

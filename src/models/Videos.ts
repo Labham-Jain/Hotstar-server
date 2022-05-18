@@ -13,7 +13,6 @@ const VideosSchema = new mongoose.Schema({
   },
   categoryId: {
     type: String,
-    required: true
   },
   likes: {
     type: Number,

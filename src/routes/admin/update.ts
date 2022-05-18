@@ -17,7 +17,6 @@ const updateAdminHandler: RequestHandler = (req, res) => {
     email = phoneOrEmail
   } else {
     phone = parseInt(phoneOrEmail.split(' ').join().replace('+91', ''))
-    console.log(phone)
   }
 
   UserModel.findOne({$or: [{phone}, {email}]}).then((result) => {

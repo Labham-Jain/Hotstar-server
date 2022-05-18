@@ -24,6 +24,10 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: undefined
   },
+  active: {
+    type: String,
+    default: 'Offline'
+  }
 })
 
 const UserModel = mongoose.model('user', UserSchema);

@@ -28,6 +28,10 @@ const ResponseCodes: ResponseCodesType = {
     'insufficient-payload': {
       status: 422,
       message: `Insufficient payload was provided!`
+    },
+    'invalid-payload': {
+      status: 400,
+      message: `Invalid payload data was provided!`
     }
   },
   ok: {

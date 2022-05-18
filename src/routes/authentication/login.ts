@@ -11,8 +11,16 @@ const loginHandler: RequestHandler = (req, res) => {
   // find if user exists in database
 
   if(!phoneOrEmail || !password) return res.status(400).deliver("Missing Payload.")
-
-  UserModel.findOne({$or: [{phone: phoneOrEmail}, {email: phoneOrEmail}]}).then((userDocument) => {
+  
+  let phone: number = 0;
+  let email: string = '';
+  
+  if(phoneOrEmail.includes('@')){
+    email = phoneOrEmail
+  } else {
+    phone = parseInt(phoneOrEmail.split(' ').join().replace('+91', ''))
+  }
+  UserModel.findOne({$or: [{phone}, {email}]}).then((userDocument) => {
     if(!userDocument){
       return res.status(404).deliver("User Not Found.");
     }

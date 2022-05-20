@@ -4,7 +4,6 @@ import bcrypt from 'bcrypt';
 import getToken from "@middlewares/JWT/getToken";
 
 const loginHandler: RequestHandler = (req, res) => {
-  
   if(!req.body) return res.status(400).deliver("Empty body!")
   const {phoneOrEmail, password} = req.body;
 

@@ -52,5 +52,6 @@ app.use('/user', addUserDetails, UserController);
 // Admin routes
 app.use('/admin', adminProtected, adminRouter);
 
-
-app.listen(5000, () => console.log('server running...'));
+app.listen(5000, '0.0.0.0', () => {
+  console.log('server running on local network with port 5000')
+})
